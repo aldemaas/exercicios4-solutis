@@ -3,23 +3,26 @@ package src.animais;
 import src.abstracts.AnimalMarinhoAB;
 
 public class Peixe extends AnimalMarinhoAB {
-
     public Peixe(String nome, int idade, String habitat, double altura, double peso) {
-        super(nome, idade, habitat, altura, peso);
+        super(nome, "Peixe", idade, habitat, altura, peso);
+    }
+    @Override
+    public void comer(int quantidade) {
+        comidaIngerida += quantidade;
     }
 
     @Override
-    public void comer() {
-        System.out.println(nome + " está comendo.");
+    public void moverse(double distancia) {
+        nadar(distancia);
     }
 
     @Override
-    public void nadar() {
-        System.out.println(nome + " está nadando.");
+    public void dormir(int horas) {
+        horasDormidas += horas;
     }
 
     @Override
-    public void dormir() {
-        System.out.println(nome + " está dormindo.");
+    public void nadar(double distancia) {
+        distanciaTotal += distancia;
     }
 }

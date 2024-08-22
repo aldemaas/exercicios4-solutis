@@ -3,23 +3,21 @@ package src.animais;
 import src.abstracts.AnimalTerrestreAB;
 
 public class Elefante extends AnimalTerrestreAB {
-
-    public Elefante(String nome, int idade, String habitat, double altura, double peso, int quantidadePatas) {
-        super(nome, idade, habitat, altura, peso, quantidadePatas);
+    public Elefante(String nome, int idade, String habitat, double altura, double peso) {
+        super(nome, "Elefante", idade, habitat, 4, altura, peso);
+    }
+    @Override
+    public void comer(int qtd) {
+        comidaIngerida += qtd;
     }
 
     @Override
-    public void comer() {
-        System.out.println(nome + " está comendo.");
+    public void moverse(double distancia) {
+        distanciaTotal += distancia;
     }
 
     @Override
-    public void andar() {
-        System.out.println(nome + " está andando.");
-    }
-
-    @Override
-    public void dormir() {
-        System.out.println(nome + " está dormindo.");
+    public void dormir(int horas) {
+        horasDormidas += horas;
     }
 }

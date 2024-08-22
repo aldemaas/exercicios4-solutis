@@ -4,23 +4,21 @@ package src.animais;
 import src.abstracts.AnimalTerrestreAB;
 
 public class Cachorro extends AnimalTerrestreAB {
-
-    public Cachorro(String nome, int idade, String habitat, double altura, double peso, int quantidadePatas) {
-        super(nome, idade, habitat, altura, peso, quantidadePatas);
+    public Cachorro(String nome, int idade, String habitat, double altura, double peso) {
+        super(nome, "Cachorro", idade, habitat, 4, altura, peso);
+    }
+    @Override
+    public void comer(int qtd) {
+        comidaIngerida += qtd;
     }
 
     @Override
-    public void comer() {
-        System.out.println(nome + " está comendo.");
+    public void moverse(double distancia) {
+        distanciaTotal += distancia;
     }
 
     @Override
-    public void andar() {
-        System.out.println(nome + " está andando.");
-    }
-
-    @Override
-    public void dormir() {
-        System.out.println(nome + " está dormindo.");
+    public void dormir(int horas) {
+        horasDormidas += horas;
     }
 }

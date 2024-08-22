@@ -2,8 +2,8 @@ package src.interfaces;
 
 public interface AnimalIF {
 
-    void comer();
-    void moverse();
-    void dormir();
+    void comer(int qtd);
+    void moverse(double distancia);
+    void dormir(int horas);
 
 }
