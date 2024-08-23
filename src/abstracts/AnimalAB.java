@@ -10,8 +10,6 @@ public abstract class AnimalAB implements AnimalIF {
 
     protected String habitat;
     protected int quantidadePatas;
-    protected int quantidadeAssas;
-    protected double envergaduraAssa;
 
     protected double altura;
 
